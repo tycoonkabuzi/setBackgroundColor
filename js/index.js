@@ -5,9 +5,10 @@
 
 let mainContent = document.getElementById("main-content");
 let btnChange = document.getElementById("btn-change-color");
-btnChange.addEventListener("click", () => {
+const setBackground = () => {
   let firstParagraph = mainContent.firstElementChild;
   let lastParagraph = mainContent.lastElementChild;
   firstParagraph.classList.toggle("red");
   lastParagraph.classList.toggle("yellow");
-});
+};
+btnChange.addEventListener("click", setBackground);
